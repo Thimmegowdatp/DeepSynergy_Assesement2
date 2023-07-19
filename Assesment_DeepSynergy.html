@@ -1,0 +1,146 @@
+
+
+<style>
+  body{
+    background-color: #ccf0ed;
+  }
+  .page-heading {
+    font-family: Clashdisplay,sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 12px;
+
+  }
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 200px 10px;
+  }
+
+  .form-container > .flex-input {
+    flex-basis: calc(47% - 10px);
+    padding-bottom: 25px;
+  }
+  .form-container > .no-flex-input{
+    flex-basis: calc(100% - 10px);
+    padding-bottom: 25px;
+  }
+
+  .form-container label {
+    display: block;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color: #020827;
+    font-size: 15px;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    border: none;
+    background: none;
+    border-bottom: 2px solid #cad5e2;
+    padding: 2px;
+    width: 100%;
+    outline: none;
+  }
+
+  .form-container select {
+    appearance: none;
+    padding-right: 20px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23000' d='M12 0H0L6 8z'/%3E%3C/svg%3E") no-repeat right center;
+    background-size: 12px 8px;
+  }
+
+  .form-container textarea {
+    resize: vertical;
+  }
+
+  @media (max-width: 600px) {
+    .form-container > div {
+      flex-basis: 100%;
+    }
+  }
+  .submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .submit-container button {
+    padding: 10px 20px;
+    background-color: #03DAC5;
+    color: #020827;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .flex-input span{
+    color: red;
+  }
+  .contact-font {
+    color: #03dac5;
+    font-family: Clashdisplay,sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .text-size-medium {
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: Clashdisplay,sans-serif;
+  }
+
+</style>
+<div class="contact-font">CONTACT</div>
+  <h1 class="page-heading">Let's connect</h1>
+<p class="text-size-medium">please fill out the form below and we'll reach out right away.</p>
+<form action="submit-form.php" method="POST">
+  <div class="form-container">
+    <div class="flex-input">
+      <label for="first-name">First name<span>*</span></label>
+      <input type="text" id="first-name" name="first-name" required>
+    </div>
+    <div class="flex-input">
+      <label for="last-name">Last name<span>*</span></label>
+      <input type="text" id="last-name" name="last-name" required>
+    </div>
+    <div class="flex-input">
+      <label for="email">Email<span>*</span></label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="flex-input">
+      <label for="company-name">Company name<span>*</span></label>
+      <input type="text" id="company-name" name="company-name" required>
+    </div>
+    <div class="flex-input">
+      <label for="job-title">Job title<span>*</span></label>
+      <input type="text" id="job-title" name="job-title" required>
+    </div>
+    <div class="flex-input">
+      <label for="purpose">I'd like to<span>*</span></label>
+      <select id="purpose" name="purpose" required>
+        <option value="">Please select an option</option>
+        <option value="finance-tech-stack">Finance my tech stack</option>
+        <option value="offer-contract-financing">Offer contract financing to my customers</option>
+      </select>
+    </div>
+    <div class="no-flex-input">
+      <label for="how-hear">How did you hear about us?<span>*</span></label>
+      <input type="text" id="how-hear" name="how-hear" required>
+    </div>
+    <div class="no-flex-input">
+      <label for="additional-info">Anything else you'd like us to know?</label>
+      <textarea id="additional-info" name="additional-info"></textarea>
+    </div>
+  </div>
+  <div class="submit-container">
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+
+
+
